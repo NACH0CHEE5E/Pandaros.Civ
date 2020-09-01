@@ -107,6 +107,7 @@ namespace Pandaros.Civ.Jobs.Goals
             CraftingJobInstance.NPC.LookAt(CraftingJobInstance.Position.Vector);
             RecipeSettingsGroup = Job.Owner.RecipeData.GetRecipeGroup(CraftingJobInstance.CraftingGroupID);
             state.JobIsDone = true;
+            state.SetCooldown(0.05, 0.15);
 
             if (CraftingJobInstance.SelectedRecipe != null)
             {
@@ -174,7 +175,7 @@ namespace Pandaros.Civ.Jobs.Goals
             GetNextRecipe(ref state);
         }
 
-        private void StopCrafting()
+        public virtual void StopCrafting()
         {
             if (CraftingJobInstance.IsCrafting)
             {
@@ -224,7 +225,7 @@ namespace Pandaros.Civ.Jobs.Goals
             }
         }
 
-        private void PutItemsInCrate(ref NPCBase.NPCState state)
+        public virtual void PutItemsInCrate(ref NPCBase.NPCState state)
         {
             JobSettings.SetGoal(Job, new PutItemsInCrateGoal(Job, JobSettings, this, state.Inventory.Inventory.ToList()), ref state);
             state.Inventory.Inventory.Clear();
