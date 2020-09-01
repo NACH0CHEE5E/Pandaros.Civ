@@ -112,6 +112,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="TimePeriods\BronzeAge\Items\Chest.cs" />
+    <Compile Include="TimePeriods\IndustrialAge\Items\Pallet.cs" />
+    <Compile Include="TimePeriods\IronAge\Items\StorageChest.cs" />
+    <Compile Include="TimePeriods\IronAge\Items\StorageDrawers.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="TimePeriods\PreHistory\Items\BasicCrate.cs" />
     <Compile Include="TimePeriods\PreHistory\Jobs\SlowPorter.cs" />
     <Compile Include="TimePeriods\StoneAge\Items\Crate.cs" />
@@ -156,9 +161,7 @@
     <Folder Include="Textures\emissiveMaskAlpha\" />
     <Folder Include="TimePeriods\AtomicAge\" />
     <Folder Include="TimePeriods\FusionAge\" />
-    <Folder Include="TimePeriods\IndustrialAge\" />
     <Folder Include="TimePeriods\InformationAge\" />
-    <Folder Include="TimePeriods\IronAge\" />
     <Folder Include="TimePeriods\RenewablesAge\" />
     <Folder Include="TimePeriods\StoneAge\Jobs\" />
   </ItemGroup>
